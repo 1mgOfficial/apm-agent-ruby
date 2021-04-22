@@ -84,7 +84,7 @@ module ElasticAPM
             ElasticAPM.with_span(
               "#{method} #{host}",
               TYPE,
-              subtype: SUBTYPE,
+              subtype: "#{host}",
               action: method,
               context: context
             ) do |span|
